@@ -1,0 +1,49 @@
+{
+  "name": "ohyay",
+  "scripts": {
+    "dev": "parcel serve --no-source-maps ./src/*.html -d ./test",
+    "build": "parcel build --public-url . --no-source-maps ./src/*.html -d ./dist"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/lodash": "^4.14.149",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
+    "lint-staged": "^10.4.2",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.5.0",
+    "prettier": "^2.1.2",
+    "sass": "^1.26.3",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "core-js": "3",
+    "eventemitter3": "^4.0.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "src": "^1.1.2"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": true
+  },
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "src/img",
+        "staticOutDir": "img"
+      },
+      {
+        "staticPath": "data",
+        "staticOutDir": "data"
+      }
+    ]
+  }
+}

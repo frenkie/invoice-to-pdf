@@ -1,0 +1,7 @@
+.cache/
+.idea/
+data/
+**/invoice.html
+dist/
+test/
+node_modules/

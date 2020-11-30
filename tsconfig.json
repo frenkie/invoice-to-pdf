@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "lib": ["es2015", "dom"],
+    "strict": true,
+    "module": "es6",
+    "target": "es2015",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "src/*",
+        "node_modules/*"
+      ]
+    }
+  }
+}

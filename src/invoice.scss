@@ -1,0 +1,245 @@
+@import '_font';
+
+$max-width: 900px;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'ShareRegular';
+}
+
+#invoice {
+  position: relative;
+  width: 1024px;
+  height: 1325px;
+}
+
+header,
+main {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+header {
+  display: block;
+  height: 400px;
+  padding-top: 50px;
+
+
+  dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 252px;
+  }
+
+  dt {
+    width: 50%;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  dd {
+    width: 50%;
+    margin: 0;
+    text-indent: 20px;
+  }
+}
+
+.invoice-meta {
+  position: absolute;
+  left: 716px;
+  top: 214px;
+}
+
+h1 {
+  font-size: 38px;
+  text-align: right;
+  font-weight: normal;
+  margin: 0;
+}
+
+main {
+  display: block;
+  padding: 0 0 0 12px;
+}
+
+.client-title {
+  margin: 0;
+}
+
+.invoice-items {
+  position: relative;
+  margin: 60px 0 35px;
+  width: 100%;
+
+  thead {
+    padding: 4px 0;
+
+    &::before {
+      position: absolute;
+      top: -3px;
+      left: 0;
+      right: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      border-top: 2px solid black;
+    }
+
+    &::after {
+      position: absolute;
+      top: 27px;
+      left: 0;
+      right: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      border-top: 2px solid black;
+    }
+  }
+
+  th {
+    text-align: right;
+
+    &:first-child {
+      text-align: left;
+    }
+
+    &:nth-child(2) { width: 100px; }
+    &:nth-child(3) { width: 100px; }
+    &:nth-child(4) { width: 100px; }
+    &:nth-child(5) { width: 100px; }
+  }
+
+  tbody {
+    tr:first-child td { padding-top: 14px;}
+    tr:last-child td { padding-bottom: 60px;}
+
+    td {
+      padding: 4px 0;
+      text-align: right;
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+  }
+
+  tfoot {
+    td:last-child {
+      text-align: right;
+    }
+
+    tr:last-child td {
+      padding: 4px 0;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      right: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      border-top: 2px solid black;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 34px;
+      left: 0;
+      right: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      border-top: 2px solid black;
+    }
+  }
+
+}
+
+.invoice-items__subtotal {
+  font-weight: bold;
+}
+
+.invoice-items__total {
+  font-weight: bold;
+  font-size: 122%;
+}
+
+footer {
+  background-color: #00AEEF;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  color: white;
+
+  > div {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: $max-width;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    padding-left: 14px;
+  }
+
+  dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 6px 0 0;
+
+    &:first-child {
+      width: 290px;
+      padding-left: 3px;
+
+      dd {
+        width: 150px;
+      }
+
+      dt {
+        width: auto;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 300px;
+    }
+
+    &:last-child  {
+      width: 400px;
+    }
+  }
+
+  dt {
+    width: 30%;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  dd {
+    width: 70%;
+    margin: 0;
+    text-indent: 20px;
+
+    > div {
+      text-indent: 0;
+      padding-left: 20px;
+    }
+  }
+}
+
+.naw {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
